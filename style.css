@@ -1,0 +1,119 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background: #0b1522;
+  font-family: 'Brush Script MT', cursive;
+}
+
+.heart {
+  height: 170px;
+  width: 170px;
+  position: relative;
+  background: #f20044;
+  transform: rotate(-45deg);
+  box-shadow: -10px 10px 90px #f20044;
+  animation: heart 0.8s linear infinite;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  color: white;
+  font-size: 10vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.button {
+  color: white;
+  font-size: 120px;
+  margin-top: 420px;
+  position: absolute;
+  width: 100%
+}
+
+@keyframes heart{
+  0% {
+      transform: rotate(-45deg) scale(1.07);
+  }
+}
+
+.heart:before {
+  content: '';
+  height: 170px;
+  width: 170px;
+  position: absolute;
+  background: #f20044;
+  box-shadow: -10px 10px 90px #f20044;
+  top: -50%;
+  border-radius: 130px;
+}
+
+.heart:after {
+  content: '';
+  height: 170px;
+  width: 170px;
+  position: absolute;
+  background: #f20044;
+  box-shadow: -10px 10px 90px #f20044;
+  right: -50%;
+  border-radius: 130px;
+}
+
+span {
+  position: absolute;
+  background: url(heart.png);
+  pointer-events: none;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  box-shadow: -5px 100px 90px #f20044;
+  transform: translate(-50%, -50%);
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+  0% {
+      transform: translate(-50%, -50%);
+      opacity: 1;
+      filter: hue-rotate(0deg);
+  }
+  100% {
+      transform: translate(-50%, -1000%);
+      opacity: 0;
+      filter: hue-rotate(720deg);
+  }
+}
+
+
+a {
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  border-radius: 40px;
+  background: #f20044;
+  border: 2px solid white;
+  box-shadow: -10px 10px 90px pink;
+}
+
+a:hover {
+  opacity: 0.8;
+  box-shadow: -10px 10px 90px red;
+}
